@@ -178,22 +178,28 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hol-3h-68Z">
                                 <rect key="frame" x="47" y="98" width="320" height="162"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="EBx-dE-oX7"/>
+                                    <constraint firstAttribute="height" constant="162" id="1Tj-re-OiP"/>
                                 </constraints>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
                                     <!--1970-01-01 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="kk_KZ"/>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN3-bH-14S">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN3-bH-14S">
                                 <rect key="frame" x="20" y="333" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laI-b8-R8Q">
-                                <rect key="frame" x="165" y="449" width="84" height="36"/>
+                                <rect key="frame" x="20" y="772" width="374" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SXA-4B-7ti"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="save:" destination="B8L-vB-Bfa" eventType="touchUpInside" id="ELX-VG-d4n"/>
                                 </connections>
@@ -201,14 +207,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="DN3-bH-14S" firstAttribute="centerX" secondItem="laI-b8-R8Q" secondAttribute="centerX" id="6ZE-67-D3Z"/>
-                            <constraint firstItem="laI-b8-R8Q" firstAttribute="top" secondItem="DN3-bH-14S" secondAttribute="bottom" constant="82" id="Azp-ll-2aP"/>
-                            <constraint firstItem="DN3-bH-14S" firstAttribute="top" secondItem="Hol-3h-68Z" secondAttribute="bottom" constant="73" id="BFN-bB-g9B"/>
-                            <constraint firstItem="DN3-bH-14S" firstAttribute="centerX" secondItem="Hol-3h-68Z" secondAttribute="centerX" id="RN3-Jo-qF4"/>
-                            <constraint firstItem="laI-b8-R8Q" firstAttribute="leading" secondItem="Dm2-iK-XNS" secondAttribute="leading" constant="165" id="RY5-EW-ll2"/>
-                            <constraint firstItem="DN3-bH-14S" firstAttribute="leading" secondItem="Xeb-q8-uIU" secondAttribute="leadingMargin" id="U5c-6T-l5o"/>
-                            <constraint firstItem="Hol-3h-68Z" firstAttribute="top" secondItem="Dm2-iK-XNS" secondAttribute="top" constant="98" id="cSi-nS-0Yr"/>
-                            <constraint firstItem="DN3-bH-14S" firstAttribute="trailing" secondItem="Xeb-q8-uIU" secondAttribute="trailingMargin" id="vZx-Ap-39V"/>
+                            <constraint firstItem="Hol-3h-68Z" firstAttribute="centerX" secondItem="DN3-bH-14S" secondAttribute="centerX" id="8sY-hP-eib"/>
+                            <constraint firstItem="DN3-bH-14S" firstAttribute="trailing" secondItem="Xeb-q8-uIU" secondAttribute="trailingMargin" id="GpA-v1-1ON"/>
+                            <constraint firstItem="laI-b8-R8Q" firstAttribute="trailing" secondItem="DN3-bH-14S" secondAttribute="trailing" id="Lyp-sX-ja2"/>
+                            <constraint firstItem="Hol-3h-68Z" firstAttribute="top" secondItem="Dm2-iK-XNS" secondAttribute="top" constant="98" id="Oxx-LI-wzY"/>
+                            <constraint firstItem="DN3-bH-14S" firstAttribute="top" secondItem="Hol-3h-68Z" secondAttribute="bottom" constant="73" id="USw-nU-DRb"/>
+                            <constraint firstItem="laI-b8-R8Q" firstAttribute="leading" secondItem="DN3-bH-14S" secondAttribute="leading" id="Zpd-cY-gaS"/>
+                            <constraint firstItem="DN3-bH-14S" firstAttribute="leading" secondItem="Xeb-q8-uIU" secondAttribute="leadingMargin" id="kx9-M3-nvn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="laI-b8-R8Q" secondAttribute="bottom" constant="-9" id="orc-4a-Ie9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dm2-iK-XNS"/>
                     </view>

@@ -21,16 +21,29 @@ class ViewController: UIViewController {
     var delegateEdit:editAlarm?
     var currentIndex:Int?
     var global_title:String?
+    var hours = 0
+    var minutes = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         editTextField.text = global_title
+        datePicket.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         // Do any additional setup after loading the view.
     }
+    @objc func dateChanged(_ sender: UIDatePicker) {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: sender.date)
+        if let hour = components.hour, let minute = components.minute{
+            hours = hour
+            minutes = minute
+            print("\(hours) \(minutes)")
+        }
+    }
+
 
     @IBAction func edit(_ sender: Any) {
+        let editedTime = "\(hours):\(minutes)"
         let editedText = editTextField.text
-        let currentAlarm = Alarm(time: "16:00", description: editedText, switchs: true)
+        let currentAlarm = Alarm(time: editedTime, description: editedText, switchs: true)
         delegateEdit?.edit(index: currentIndex!, edited: currentAlarm)
         navigationController?.popViewController(animated: true)
 
